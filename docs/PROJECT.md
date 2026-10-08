@@ -18,14 +18,19 @@ Clean Architecture is used, keep dependencies pointing inward:
 
 `domain ← application ← interfaces ← infrastructure`
 
-This project uses Python 3.12 and FastAPI. The application is intentionally
-minimal; application-specific boundaries will be documented when the first use
-case is specified.
+This project uses Python 3.12 and FastAPI. The Dad Joke API uses static,
+application-owned joke data and stateless request handling:
+
+- domain: joke catalogue and category rules
+- application: random joke selection
+- interfaces: FastAPI routes for jokes, categories, and health
+- infrastructure: none for the current use case
 
 ## Structure
 
-Document the meaningful source and test directories once they exist. Reuse the
-existing repository structure where it is compatible with the selected stack.
+Meaningful directories are `app/` for the API and application logic,
+`tests/unit/` for domain and selection rules, and `tests/integration/` for the
+HTTP contract. Architecture decisions are recorded in `docs/adr/`.
 
 ## Commands
 
