@@ -34,13 +34,13 @@ Document the commands for the selected stack:
 | Activity | Command |
 |---|---|
 | Install | `bash scripts/setup-python.sh` |
-| Unit tests | `TBD` until application tests exist |
-| Integration tests | `TBD` until application tests exist |
-| Run locally | `TBD` until the FastAPI application exists |
-| Build/release | GitHub Actions workflows in `.github/workflows/` |
+| Unit tests | `python -m pytest tests/unit -q` |
+| Integration tests | `python -m pytest tests/integration -q` |
+| Run locally | `uvicorn app.main:app --reload` |
+| Build/release | Push a `vX.Y.Z` tag; GitHub Actions publishes the release and GHCR image |
 
 ## Dependencies
 
-Dependency manifest: `requirements.txt`. Runtime: Python 3.12. Never commit
-credentials or secrets; document required secret names and configuration
-variables only.
+Dependency manifest: `requirements.txt`. Runtime: Python 3.12. The release
+workflow publishes `ghcr.io/${OWNER}/${REPOSITORY}`. Never commit credentials
+or secrets; document required secret names and configuration variables only.

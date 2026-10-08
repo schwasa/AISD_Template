@@ -1,17 +1,18 @@
 # TASKS.md
 
-PHASE: 0
+PHASE: 4
 STATUS: done
 
 (0=Bootstrap | 1=Specify | 2=Design | 3=Develop | 4=Validate | 5=Deploy)
 
 ## Current Use Case
 
-docs/specs/UC-[XXX]-[NAME].md
+docs/specs/UC-001-DAD-JOKE-API.md
 
-Bootstrap complete: local Git repository, Python 3.12 environment, dependencies,
-Copilot skills, and GitHub remote are configured and verified. The working tree
-is intentionally uncommitted for the student first-commit exercise.
+Bootstrap is complete. DEVELOP and VALIDATE are complete for the first Dad Joke
+API slice. Unit tests, integration tests, workflow parsing, Docker build, and
+container health smoke testing passed locally. E2E tests are deferred because
+the API has no browser or user-interface flow.
 
 ## Backlog
 
