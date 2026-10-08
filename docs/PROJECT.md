@@ -5,11 +5,11 @@ the project created from this template.
 
 ## Purpose
 
-- Project name:
-- User or organisational problem:
-- Intended users:
-- In scope:
-- Out of scope:
+- Project name: AISD_Teaching_Example
+- User or organisational problem: Demonstrate a standardized workflow for cloning a repository, initializing the local development environment, creating a first commit, and merging changes into `main` with CI/CD checks.
+- Intended users: Students learning Git, GitHub, Python, FastAPI and the AI-SDLC workflow.
+- In scope: Repository bootstrap, the first-commit workflow, pull requests, and standardized CI/CD validation for a future FastAPI example.
+- Out of scope: Production deployment, authentication, persistent data storage, and application-specific business features.
 
 ## Architecture
 
@@ -18,7 +18,9 @@ Clean Architecture is used, keep dependencies pointing inward:
 
 `domain ← application ← interfaces ← infrastructure`
 
-Record important framework, data-store and integration decisions here.
+This project uses Python 3.12 and FastAPI. The application is intentionally
+minimal; application-specific boundaries will be documented when the first use
+case is specified.
 
 ## Structure
 
@@ -31,13 +33,14 @@ Document the commands for the selected stack:
 
 | Activity | Command |
 |---|---|
-| Install | `TBD` |
-| Unit tests | `TBD` |
-| Integration tests | `TBD` |
-| Run locally | `TBD` |
-| Build/release | `TBD` |
+| Install | `bash scripts/setup-python.sh` |
+| Unit tests | `TBD` until application tests exist |
+| Integration tests | `TBD` until application tests exist |
+| Run locally | `TBD` until the FastAPI application exists |
+| Build/release | GitHub Actions workflows in `.github/workflows/` |
 
 ## Dependencies
 
-List the dependency manifest and runtime versions. Never commit credentials or
-secrets; document required secret names and configuration variables only.
+Dependency manifest: `requirements.txt`. Runtime: Python 3.12. Never commit
+credentials or secrets; document required secret names and configuration
+variables only.
