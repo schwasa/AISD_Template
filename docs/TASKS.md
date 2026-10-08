@@ -9,10 +9,10 @@ STATUS: done
 
 docs/specs/UC-001-DAD-JOKE-API.md
 
-Bootstrap is complete. DEVELOP and VALIDATE are complete for the first Dad Joke
-API slice. Unit tests, integration tests, workflow parsing, Docker build, and
-container health smoke testing passed locally. E2E tests are deferred because
-the API has no browser or user-interface flow.
+Bootstrap, SPECIFY, and DESIGN are complete. DEVELOP and VALIDATE are complete
+for the categorized random-joke API. Unit tests, integration tests, workflow
+parsing, Docker build, and manual container/API checks passed. DEPLOY is
+deferred for this lesson.
 
 ## Backlog
 
